@@ -1,95 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-.nav{
-    background: #15d9bd;
-    height: 80px;
-    color: #000;
+.menu{
+    background-color: #1a202c;
+    color: #fff;
+    height: 70px;
 }
 
-.nav_container{
+.menu_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu_links{
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+}
+
+.menu_item{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0%, 0% 0%);
+    --transform: rotate(-90deg);
+}
+
+.menu_item:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%); 
+    --transform: rotate(0);
+}
+
+.menu_link{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 30px;
     display: flex;
     height: 100%;
-    width: 90%;
-    margin: 0 auto;
-    justify-content: space-between;
     align-items: center;
 }
 
-.nav_logo{
-    font-size: 1.5em;
-    font-weight: 900;
+.menu_link:hover{
+    background-color: #6f788b;
 }
 
-.nav_menu{
-    display: grid;
-    grid-auto-flow: column;
-    gap: 3em;
-}
-
-.nav_item{
-    color: #000;
-    text-decoration: none;
-    font-weight: 900;
-    text-transform: uppercase;
-    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-
-.nav_item::after{
-    content: "";
+.menu_arrow{
+    transform: var(--transform);
+    transition: transform .3s;
     display: block;
-    background-color: #000;
-    width: 90%;
-    margin-top: 3px;
-    height: 3px;
-    clip-path: var(--clippy);
-    transition: clip-path .5s;
+    margin-left: 3px;
 }
 
-.nav_item:hover{
-    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+.menu_nesting{
+    list-style: none;
+    transition: clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #1a202c;
 }
 
-.nav_label, .nav_input{
+.menu_link_inside{
+    padding: 30px 100px 30px 20px;
+}
+
+.menu_link_inside:hover{
+    background-color: #6f788b;
+}
+
+.menu_hamburguer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
     display: none;
 }
 
-/* ########## MEDIA QUERIES ########## */
-@media (max-width:700px){
-    .nav_label{
-        display: block;
-        cursor: pointer;
-    }
+.menu_img{
+    display: block;
+    width: 36px;
+}
 
-    .nav_item{
-        margin-top: 25px;
-    }
-
-    .nav_menu{
-        position: fixed;
-        top: 80px;
-        bottom: 0;
-        background: #1fecd0;
-        width: 100%;
-        left: 0;
+/* ################# MEDIA QUERY ################# */
+@media (max-width: 800px){
+    .menu_hamburguer{
         display: flex;
-        /* justify-content: space-evenly; */
-        flex-direction: column;
-        align-items: center;
-        clip-path: inset(0 0 100% 0);
-        transition: clip-path 1s ease-in-out;
     }
 
-    .nav_input:checked + .nav_menu{
-        clip-path: inset(0 0 0 0);
+    .menu_item{
+        --clip: 0;
+        overflow: hidden;
+    }
+
+    .menu_item_active{
+        --transform: rotate(0);
+        --background: #6f788b;
+    }
+
+    .menu_item_show{
+        background-color: var(--background);
+    }
+
+    .menu_links{
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        top: 70px;
+        right: 0;
+        bottom: 0;
+        background-color: #1a202c;
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        transform: translateX(100%);
+    }
+
+    .menu_links_show{
+        transform: unset;
+        width: 100%;
+    }
+
+    .menu_link{
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .menu_arrow{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .menu_nesting{
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height .3s;
+    }
+
+    .menu_link_inside{
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid #6f788b;
     }
 }
