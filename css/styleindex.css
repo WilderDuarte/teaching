@@ -328,4 +328,7 @@ footer{
     .line-perfil h2{
         width: 350px;
     }
+    .redes-sociales{
+        margin: 5px 0;
+    }
 }
