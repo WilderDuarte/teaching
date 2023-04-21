@@ -1,17 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200,400,600&display=swap');
 
 * {
     margin: 0;
-    height: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    font-family: 'Noto Sans', sans-serif;
-    background-image: linear-gradient(to bottom, #e3e3e3, #d9cae0, #dbaed3, #e48fb7, #e96e8e);
-    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(227,227,227);
+    background: linear-gradient(90deg, rgba(227,227,227,1) 0%, #e96e8e 100%);
 }
 
-.container{
-    
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.table-space {
+    max-width: 1400px;
+    border: 10px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    background-color: #fff;
+    padding: 50px;
+}
+
+.table-space .title-table{
+    display: block;
+    text-align: center;
+    border: 2px solid #e96e8e;
+    border-radius: 30px;
+    padding: 10px 0;
+    background-color: #e9a8b9;
+    box-shadow: 0 0 5px gray;
+    margin-bottom: 40px;
+}
+
+.table-space .title-table h2 {
+    font-weight: 600;
+}
+
+.table-space .table{
+    display: block;
+    margin: 20px 0;
+}
+
+.table-space .enlace {
+    display: block;
+    text-align: center;
+}
+
+.table-space .enlace a {
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 18px;
+    color: gray;
+    border-radius: 5px;
+    padding: 8px;    
+}
+
+.table-space .enlace a:hover{
+    color: #e96e8e;
+    box-shadow: 0px 0px 5px #3d3d3d;
+    transition: all ease-in-out .3s;
+}
+
+table{
+    width: 1000px;
+}
+
+table thead tr td{
+    background-color: #e9a8b9;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+table tbody tr td {
+    padding: 6px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 200;
+}
+
+table tbody tr:hover{
+    background-color: #e9a8b9;
+    transition: all ease-in-out .5s;
 }
