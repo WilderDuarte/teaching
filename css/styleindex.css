@@ -297,5 +297,35 @@ footer{
         margin-left: auto;
         border-left: 1px solid #6f788b;
     }
+
+    .sections{
+        margin-top: 0px;
+    }
+    .perfil{
+        margin-bottom: 0px;
+    }
+
 }
 
+@media (max-width: 450px){
+    body{
+        position: relative;
+        min-height: 100vh;
+    }
+    .photo img{
+        width: 250px;
+        height: 250px;
+    }
+    .sections{
+        margin-top: 0px;
+    }
+    .perfil{
+        margin-bottom: 0px;
+    }
+    .perfil .line{
+        width: 5px;
+    }
+    .line-perfil h2{
+        width: 350px;
+    }
+}
