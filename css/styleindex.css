@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100,300;400;700&display=swap');
 
 * {
     margin: 0;
@@ -8,6 +8,9 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to left top, #46d5fa, #94dcff, #c7e5ff, #eaf0ff, #ffffff);
+    position: relative;
+    min-height: 100vh;
 }
 
 .menu{
@@ -98,6 +101,116 @@ body{
     display: block;
     width: 36px;
 }
+
+/* ################# SECCIÓN ################# */
+.perfil{
+    margin: auto;
+}
+
+.line-perfil{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.perfil i {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    line-height: 40px;
+    color: #fff;
+    border: 2px solid #8b4be0;
+    font-size: 24px;
+    text-align: center;
+    background-color: #8b4be0;
+    /* font-weight: 100; */
+}
+
+.perfil .line {
+    height: 2px;
+    width: 45px;
+    background-color: #8b4be0;
+}
+
+.line-perfil h2 {
+    border: 2px solid #8b4be0;
+    border-radius: 30px;
+    padding: 5px 20px;
+    font-weight: 300;
+    width: 400px;
+}
+
+.container{
+    max-width: 1400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.sections{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.perfil{
+    /* background-color: aquamarine; */
+    width: 50%;
+}
+
+.photo{
+    width: 50%;
+    text-align: left;
+    margin-left: 50px;
+}
+
+
+
+
+/* ################# FOOTER ################# */
+footer{
+    background-color: #1a202c;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.redes-sociales{
+    display: block;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.redes-sociales a i {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.redes-sociales a i:hover{
+    transform: scale(1.2);
+    transition: all ease-in-out .5s;
+}
+
+.title-media {
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    padding: 4px;
+    padding-top: 20px;
+    border-radius: 30px;
+    font-size: 300;   
+    margin-top: -15px; 
+}
+
+    
 
 /* ################# MEDIA QUERY ################# */
 @media (max-width: 800px){
