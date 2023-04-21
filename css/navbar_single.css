@@ -8,7 +8,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background: #f4f8ff;
+    background-image: linear-gradient(to right top, #293241, #5b5f6c, #8f919a, #c6c6cb, #ffffff);
     height: 100vh;
 }
 
@@ -64,6 +64,7 @@ body{
 .nav_label, .nav_input{
     display: none;
 }
+
 
 /* ########## MEDIA QUERIES ########## */
 @media (max-width:700px){
