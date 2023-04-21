@@ -125,7 +125,6 @@ body{
     font-size: 24px;
     text-align: center;
     background-color: #8b4be0;
-    /* font-weight: 100; */
 }
 
 .perfil .line {
@@ -213,6 +212,28 @@ footer{
     
 
 /* ################# MEDIA QUERY ################# */
+@media (max-width: 1200px){
+    .sections {
+        margin-top: 50px;
+        flex-direction: column;
+    }
+    .sections .photo {
+        margin-left: 0px;
+    }
+    .photo{
+        width: 100%;
+        text-align: center;
+    }
+    .perfil{
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .line-perfil{
+        justify-content: center;
+    }
+
+}
+
 @media (max-width: 800px){
     .menu_hamburguer{
         display: flex;
@@ -277,3 +298,4 @@ footer{
         border-left: 1px solid #6f788b;
     }
 }
+
